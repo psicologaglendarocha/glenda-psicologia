@@ -1,0 +1,89 @@
+<section class="atendimento" id="atendimento">
+  <div class="container">
+    <h2 class="serif text-center" style="margin-bottom: 2.5rem;">Para quem é o atendimento?</h2>
+    
+    <div class="atendimento-grid">
+      <div class="atendimento-image-box">
+         <img src="/sala.jpeg" alt="Espaço de atendimento adulto" class="rounded-img" />
+         <h3 class="serif text-center mt-3">Adultos</h3>
+      </div>
+      <div class="atendimento-image-box">
+         <img src="/sala2.jpeg" alt="Espaço infanto-juvenil" class="rounded-img" />
+         <h3 class="serif text-center mt-3">Adolescentes</h3>
+      </div>
+    </div>
+
+    <div class="modalidades-box">
+      <div class="modalidade">
+        <div class="mod-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div>
+          <h4 class="serif">Atendimento Online</h4>
+          <p>Faça suas sessões no conforto da sua casa, disponível para todo o Brasil.</p>
+        </div>
+      </div>
+      
+      <div class="modalidade">
+        <div class="mod-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h4 class="serif">Atendimento Presencial</h4>
+          <p>Um ambiente preparado e acolhedor esperando por você em Recife - PE.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .atendimento h2 { font-size: 2.5rem; color: var(--primary); }
+  .atendimento-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  
+  .atendimento-image-box { transition: transform 0.3s ease; }
+  .atendimento-image-box:hover { transform: translateY(-5px); }
+  
+  .rounded-img { 
+    width: 100%; 
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  
+  .mt-3 { margin-top: 1.5rem; }
+  
+  .modalidades-box { 
+    display: flex; 
+    gap: 3rem; 
+    background-color: var(--surface); 
+    padding: 3.5rem; 
+    border-radius: 20px; 
+    margin-top: 5rem;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .modalidade { 
+    flex: 1; 
+    display: flex; 
+    gap: 1.2rem; 
+    align-items: flex-start; 
+  }
+  
+  .mod-icon {
+    background-color: var(--background);
+    color: var(--primary);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  
+  .modalidade h4 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.5rem; }
+  .modalidade p { color: var(--gray); font-size: 0.95rem; }
+  
+  @media (max-width: 992px) { 
+    .atendimento-grid, .modalidades-box { grid-template-columns: 1fr; flex-direction: column; } 
+    .modalidades-box { padding: 2rem; gap: 2rem; }
+  }
+</style>

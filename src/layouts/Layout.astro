@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+}
+
+const { title = "Glenda Rocha | Psicóloga Clínica" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Glenda Rocha - Psicóloga Clínica. Atendimento presencial em Recife e online para todo o Brasil." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="psicóloga, psicóloga clínica, psicoterapia, terapia online, psicóloga Recife, saúde mental, autoconhecimento, Glenda Rocha" />
+		<meta name="format-detection" content="telephone=no">
+		<meta name="author" content="Glenda Rocha" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph / Redes Sociais -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Glenda Rocha - Psicóloga Clínica. Atendimento presencial em Recife e online para todo o Brasil." />
+		<meta property="og:locale" content="pt_BR" />
+		
+		<title>{title}</title>
+		
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	</head>
+	<body>
+		<slot />
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('active');
+						}
+					});
+				}, { threshold: 0.15 }); // Ativa quando 15% do elemento aparece
+
+				const hiddenElements = document.querySelectorAll('.reveal');
+				hiddenElements.forEach((el) => observer.observe(el));
+			});
+		</script>
+	</body>
+</html>

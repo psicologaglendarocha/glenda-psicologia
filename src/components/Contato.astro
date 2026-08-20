@@ -1,0 +1,124 @@
+---
+const { wppLink } = Astro.props;
+---
+<section class="contato bg-surface" id="contato">
+  <div class="container">
+    
+    <div class="quote-wrapper reveal">
+      <div class="quote-box">
+        <h2 class="serif italic">"Você não é difícil de amar. Você foi treinada a amar em condições difíceis."</h2>
+      </div>
+    </div>
+
+    <div class="contato-grid">
+      
+      <div class="contato-info reveal delay-1">
+        <h3 class="serif section-title">Visite o Consultório</h3>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <i class="ph ph-map-pin icon-style"></i>
+            <div class="info-text">
+              <strong>Empresarial Palmira</strong>
+              <p>Av. Conde da Boa Vista, 1410 - Boa Vista<br>Recife - PE, 50060-001</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="ph ph-envelope-simple icon-style"></i>
+            <div class="info-text">
+              <a href="mailto:glendar.psicologia@gmail.com" class="custom-link">glendar.psicologia@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="ph ph-instagram-logo icon-style"></i>
+            <div class="info-text">
+              <a href="https://www.instagram.com/psi_glendarocha/" target="_blank" class="custom-link">@psi_glendarocha</a>
+            </div>
+          </div>
+        </div>
+
+        <a href={wppLink} target="_blank" class="btn btn-primary btn-agendar mt-4">
+          <i class="ph ph-whatsapp-logo" style="font-size: 1.2rem;"></i>
+          Agendar Sessão
+        </a>
+      </div>
+      
+      <div class="map-container reveal delay-2">
+         <iframe 
+            src="https://maps.google.com/maps?q=Empresarial%20Palmira%20Av.%20Conde%20da%20Boa%20Vista%2C%201410%20Recife&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+         </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* --- Estilos da Frase --- */
+  .quote-wrapper { display: flex; justify-content: center; margin-bottom: 5rem; }
+  .quote-box { 
+    background-color: var(--secondary); 
+    padding: 4rem 3rem; 
+    border-radius: 24px; 
+    text-align: center; 
+    max-width: 850px; width: 100%;
+    box-shadow: 0 15px 40px rgba(214, 180, 167, 0.25);
+  }
+  .quote-box h2 { font-size: 2.1rem; color: var(--text); line-height: 1.5; font-style: italic; font-weight: 500; }
+  
+  /* --- Grid Principal --- */
+  .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: stretch; }
+  .contato-info { display: flex; flex-direction: column; justify-content: center; }
+  .section-title { font-size: 2.2rem; color: var(--primary); margin-bottom: 2.5rem; }
+  
+  /* --- Itens de Contato --- */
+  .info-list { display: flex; flex-direction: column; gap: 1.8rem; }
+  .info-item { display: flex; align-items: flex-start; gap: 1rem; }
+  
+  .icon-style {
+    font-size: 1.5rem; /* Tamanho perfeito para o ícone Phosphor */
+    color: var(--primary);
+    margin-top: 0.1rem;
+    padding: 0.5rem;
+    background-color: var(--background);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+  }
+  .info-item:hover .icon-style { transform: scale(1.1); }
+  
+  .info-text strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 0.3rem; }
+  .info-text p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
+  
+  .custom-link { color: var(--text); text-decoration: none; transition: color 0.3s ease; font-weight: 500; }
+  .custom-link:hover { color: var(--primary); text-decoration: underline; }
+  
+  .btn-agendar { align-self: flex-start; }
+  .mt-4 { margin-top: 2.5rem; }
+  
+  /* --- Mapa Responsivo --- */
+  .map-container { 
+    width: 100%; 
+    min-height: 400px;
+    border-radius: 20px; 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 4px solid var(--background); 
+    background-color: #f0f0f0; 
+  }
+  
+  @media (max-width: 992px) { 
+    .contato-grid { grid-template-columns: 1fr; gap: 3rem; } 
+    .map-container { min-height: 350px; aspect-ratio: 4/3; }
+    .quote-box { padding: 3rem 1.5rem; }
+    .quote-box h2 { font-size: 1.6rem; }
+  }
+</style>

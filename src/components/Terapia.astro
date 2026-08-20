@@ -1,0 +1,88 @@
+<section class="terapia bg-surface" id="terapia">
+  <div class="container">
+    <div class="terapia-header text-center reveal">
+      <h2 class="serif">Como a terapia pode ajudar?</h2>
+      <p>A psicoterapia é um processo de descoberta e acolhimento.</p>
+    </div>
+    
+    <div class="terapia-grid">
+      <div class="terapia-card reveal delay-1">
+        <div class="icon-wrapper">
+          <i class="ph ph-brain"></i>
+        </div>
+        <h4 class="serif">Clareza Emocional</h4>
+        <p>Compreenda a raiz de suas angústias e aprenda a nomear e gerenciar seus sentimentos no dia a dia.</p>
+      </div>
+
+      <div class="terapia-card reveal delay-2">
+        <div class="icon-wrapper">
+          <i class="ph ph-plant"></i>
+        </div>
+        <h4 class="serif">Desenvolvimento</h4>
+        <p>Construa recursos para lidar com situações de estresse, ansiedade e tomada de decisões.</p>
+      </div>
+
+      <div class="terapia-card reveal delay-3">
+        <div class="icon-wrapper">
+          <i class="ph ph-shield-check"></i>
+        </div>
+        <h4 class="serif">Autonomia</h4>
+        <p>Fortaleça sua autoestima e aprenda a estabelecer limites saudáveis em suas relações.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .terapia-header h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+  .terapia-header p { color: var(--gray); margin-bottom: 3.5rem; font-size: 1.1rem; }
+  .terapia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  
+  .terapia-card { 
+    background-color: var(--background); 
+    padding: 3rem 2rem; 
+    border-radius: 20px; 
+    text-align: center; 
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+  
+  .terapia-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(189, 117, 92, 0.08); 
+    border-color: rgba(189, 117, 92, 0.15);
+  }
+  
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--surface);
+    color: var(--primary);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+  
+  .icon-wrapper i {
+    font-size: 2.2rem; /* Tamanho do ícone Phosphor */
+    transition: transform 0.4s ease;
+  }
+  
+  .terapia-card:hover .icon-wrapper {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .terapia-card:hover .icon-wrapper i {
+    transform: scale(1.15);
+  }
+
+  .terapia-card h4 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--primary); }
+  .terapia-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
+  
+  @media (max-width: 992px) { .terapia-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>
