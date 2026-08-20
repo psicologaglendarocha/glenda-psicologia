@@ -1,0 +1,70 @@
+<section class="demandas" id="demandas">
+  <div class="container text-center reveal">
+    <h2 class="serif section-title">Áreas de Atendimento</h2>
+    <p class="subtitle">Apoio psicológico focado nas suas necessidades e no seu momento de vida.</p>
+    
+    <div class="demandas-grid">
+      <span class="demanda-pill reveal delay-1">Ansiedade</span>
+      <span class="demanda-pill reveal delay-1">Depressão</span>
+      <span class="demanda-pill reveal delay-1">Autoestima</span>
+      <span class="demanda-pill reveal delay-2">Regulação Emocional</span>
+      <span class="demanda-pill reveal delay-2">Relacionamentos</span>
+      <span class="demanda-pill reveal delay-2">Luto e Perdas</span>
+      <span class="demanda-pill reveal delay-3">Autoconhecimento</span>
+      <span class="demanda-pill reveal delay-3">Imposição de Limites</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .demandas { background-color: var(--background); padding: 5rem 0;}
+  
+  .section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+  .subtitle { color: var(--gray); font-size: 1.1rem; margin-bottom: 3.5rem; }
+
+  .demandas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .demanda-pill {
+    background-color: var(--surface);
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    cursor: default;
+    transition: all 0.3s ease;
+  }
+
+  .demanda-pill:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(189, 117, 92, 0.25);
+    border-color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .section-title { font-size: 2rem; }
+    .subtitle { margin-bottom: 2.5rem; font-size: 1rem; }
+    
+    .demandas-grid {
+      gap: 0.6rem; 
+      padding: 0 0.5rem;
+    }
+    
+    .demanda-pill {
+      font-size: 0.85rem; 
+      padding: 0.6rem 1.2rem; 
+      flex: 0 1 auto; 
+    }
+  }
+</style>

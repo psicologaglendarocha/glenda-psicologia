@@ -1,29 +1,57 @@
 <section class="sobre" id="sobre">
   <div class="container sobre-container">
-    <div class="sobre-text">
+    
+    <div class="sobre-text reveal">
       <h2 class="serif">Sobre Glenda Rocha</h2>
       <p>Sou psicóloga clínica dedicada a ajudar pessoas a encontrarem seu equilíbrio emocional. Acredito que o autoconhecimento é a chave para transformar a forma como nos relacionamos com o mundo e com nós mesmos.</p>
-      <p>Minha atuação tem foco em demandas como <strong>Ansiedade, Depressão, Autoestima, Bullying e Limites</strong>, sempre proporcionando uma escuta ativa e livre de julgamentos.</p>
+      <p>Meu objetivo é proporcionar um espaço de escuta ativa, ética e totalmente livre de julgamentos, ajudando você a lidar com seus desafios de forma saudável e acolhedora.</p>
     </div>
-    <div class="sobre-stats">
+
+    <div class="sobre-stats reveal delay-1">
+      
       <div class="stat-card">
-        <h3 class="serif">CRP</h3>
-        <p>02/32&#8203;615</p>
+        <h3 class="serif">Abordagem</h3>
+        <p>Terapia Cognitivo-Comportamental (TCC)</p>
       </div>
+
       <div class="stat-card">
-        <h3 class="serif">Foco</h3>
-        <p>Autoconhecimento e Saúde Emocional</p>
+        <h3 class="serif">Faixas de Atendimento</h3>
+        <p>Adolescentes (a partir dos 10 anos) e Adultos</p>
       </div>
+
+      <div class="stat-card">
+        <h3 class="serif">Registro Profissional</h3>
+        <p>CRP: 02/32&#8203;615</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <style>
-  .sobre-container { display: grid; grid-template-columns: 3fr 2fr; gap: 4rem; }
+  .sobre-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+  
   .sobre-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary); }
-  .sobre-text p { margin-bottom: 1rem; font-size: 1.05rem; }
-  .sobre-stats { display: flex; flex-direction: column; gap: 1.5rem; justify-content: center;}
-  .stat-card { background-color: var(--surface); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--secondary); }
-  .stat-card h3 { color: var(--primary); margin-bottom: 0.2rem;}
-  @media (max-width: 992px) { .sobre-container { grid-template-columns: 1fr; } }
+  .sobre-text p { margin-bottom: 1.2rem; font-size: 1.05rem; color: var(--text); line-height: 1.7; }
+  
+  .sobre-stats { display: flex; flex-direction: column; gap: 1.2rem; }
+  
+  .stat-card { 
+    background-color: var(--surface); 
+    padding: 1.5rem 2rem; 
+    border-radius: 16px; 
+    border-left: 4px solid var(--primary); 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover { transform: translateX(5px); }
+  
+  .stat-card h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.3rem;}
+  .stat-card p { color: var(--gray); font-size: 0.95rem; font-weight: 500; }
+  
+  @media (max-width: 992px) { 
+    .sobre-container { grid-template-columns: 1fr; gap: 3rem; } 
+    .sobre-text h2 { font-size: 2rem; }
+  }
 </style>

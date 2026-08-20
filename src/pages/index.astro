@@ -7,8 +7,8 @@ import Terapia from '../components/Terapia.astro';
 import Atendimento from '../components/Atendimento.astro';
 import Contato from '../components/Contato.astro';
 import Footer from '../components/Footer.astro';
+import Demandas from '../components/Demandas.astro';
 
-// Variável que passaremos para os componentes que usam o botão do WhatsApp
 const wppLink = "https://api.whatsapp.com/send/?phone=55081992750202&text=Olá,+gostaria+de+saber+mais+sobre+a+terapia&type=phone_number&app_absent=0";
 ---
 
@@ -17,6 +17,7 @@ const wppLink = "https://api.whatsapp.com/send/?phone=55081992750202&text=Olá,+
   <main>
     <Hero wppLink={wppLink} />
     <Sobre />
+    <Demandas />
     <Terapia />
     <Atendimento />
     <Contato wppLink={wppLink} />
